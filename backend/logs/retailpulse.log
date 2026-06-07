@@ -4,3 +4,4 @@
 {"timestamp": "2026-06-06T15:57:22.005752+00:00", "level": "INFO", "logger": "app.migrations", "message": "Running database migrations", "event": "migration", "filename": "migrations.py"}
 {"timestamp": "2026-06-06T17:54:37.635412+00:00", "level": "INFO", "logger": "app.migrations", "message": "Running database migrations", "event": "migration", "filename": "migrations.py"}
 {"timestamp": "2026-06-06T18:02:53.472107+00:00", "level": "INFO", "logger": "app.migrations", "message": "Running database migrations", "event": "migration", "filename": "migrations.py"}
+{"timestamp": "2026-06-07T19:33:50.717201+00:00", "level": "INFO", "logger": "app.migrations", "message": "Running database migrations", "event": "migration", "filename": "migrations.py"}
