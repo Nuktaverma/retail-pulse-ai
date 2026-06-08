@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
-    run_migrations()
+    # run_migrations()
     yield
 
 
@@ -112,9 +112,9 @@ async def upload_sales(file: UploadFile = File(...), validate_only: bool = Form(
         if not file.filename or not file.filename.lower().endswith(".csv"):
             raise HTTPException(400, "Upload must be a CSV file.")
 
-        logger.info("File received", extra={"event": "upload", "filename": file.filename})
+        logger.info("File received", extra={"event": "upload", "uploaded_filename": file.filename})
         content = await file.read()
-        logger.info("File read", extra={"event": "upload", "filename": file.filename, "rows": len(content)})
+        logger.info("File read", extra={"event": "upload", "uploaded_filename": file.filename, "rows": len(content)})
         result = import_sales_csv(content, db, validate_only=validate_only)
         return {"success": True, **result}
     except Exception as e:
